@@ -1,7 +1,6 @@
 <?php
 
 include 'Telegram.php';
-include 'get.php';
 
 date_default_timezone_set('asia/tehran');
 /*
