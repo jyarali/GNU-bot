@@ -154,7 +154,7 @@ if ($text == '/help') {
     $telegram->sendMessage($content);
 }
 // kick out users by reply user message!
-if ($text == '/kick' && ($userstat == 'creator' || $userstat == 'administrator' || $user_id == 118934100)) {
+if ($text == '/kick' && ($userstat == 'creator' || $userstat == 'administrator' )) {
     $kick_id = $messagea['message']['reply_to_message']['from']['id'];
     $kick_username = $messagea['message']['reply_to_message']['from']['username'];
 
@@ -224,7 +224,7 @@ if (isset($messagea['message']['new_chat_members'])) {
     // $telegram->deleteMessage($content2);
 }
 // delete messages
-if (strpos($text, '/delete') !== false && ($userstat == 'creator' || $userstat == 'administrator' || $user_id == 118934100)) {
+if (strpos($text, '/delete') !== false && ($userstat == 'creator' || $userstat == 'administrator')) {
     $delnum0 = str_replace('/delete', '', $text);
     $delnum = (int) $delnum0;
     $content = [
